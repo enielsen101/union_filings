@@ -1,0 +1,167 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box; margin: auto;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+/* style div for whole page here; use padding for container instead of margins for each div, much easier!! */
+
+.container{
+    max-width: 800px;
+    padding: 15px;
+    text-align: justify;
+}
+
+body{
+    background-color:
+    lightgray;
+
+}
+
+/* div for headline section here*/
+
+.headline{
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-family: Helvetica, serif;
+    font-size: 30px;
+
+}
+
+h2{
+    font-family: Georgia, Aleo;
+    font-style: italic;
+    font-size: 1 em;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+h3{
+    margin-bottom: 0px;
+    margin-top: 1em;
+    font-size: 15px;
+    color: blue;
+}
+
+/*div for figure here*/
+
+
+figure{
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+figcaption{
+    font-style: italic;
+    color: gray;
+    margin-bottom: 18px;
+}
+
+/* photo div here */
+
+.photo{
+    max-width: 100%;
+}
+
+/* add padding to put line breaks between paragraphs -- the code collapsed them for some reason */
+
+.paragraphs{
+
+  max-width: 750px;   
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+p{
+    font-family: Georgia, Aleo;
+    font-size: 18px;
+    padding-bottom: 10px;
+    line-height: 1.6;
+
+}
+
+/* viz1 here */
+
+.viz1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* viz2 here */
+
+.viz2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* viz3 here */
+
+.viz3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+/* increase headline size for tablet & Desktop */
+
+h1{
+    font-size:35px;
+}
+
+/* decrease size of text elements in tablet & desktop so layout centers text above and below photo, which is larger */
+
+.headline, .viz1, .viz2, .viz3 {
+    width:80%;
+}
+
+/* put all code above HERE */
+
+}
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+
+/* make contianer div larger for desktop to accomodate elements */
+
+.container {
+    max-width: 900px;
+}
+
+/* put all code above HERE */
+
+}
+
